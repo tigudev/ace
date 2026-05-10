@@ -65,12 +65,39 @@ section p.sub-section,.section-sub{font-size:clamp(.95rem,1.5vw,1.1rem);color:va
 
 /* ===== HOW IT WORKS ===== */
 #how{text-align:center}
+#how .how-detail{
+  max-width:900px;
+  margin:0 auto 3rem;
+  padding:2rem 2.2rem;
+  border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(19,22,39,.95),rgba(19,22,39,.75));
+  border:1px solid var(--border-light);
+  box-shadow:var(--shadow);
+  text-align:left;
+}
+
+#how .how-detail p{
+  font-size:clamp(.92rem,1.4vw,1rem);
+  color:var(--muted);
+  line-height:1.75;
+  margin-bottom:1rem;
+}
+
+#how .how-detail p:last-child{
+  margin-bottom:0;
+}
+
+#how .how-detail strong{
+  color:var(--text);
+  font-weight:700;
+}
 #how .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1000px;margin:0 auto}
 #how .step{display:flex;align-items:flex-start;text-align:left;gap:1.2rem;padding:2rem;border-radius:var(--radius);background:var(--card);border:1px solid var(--border-light);transition:all .3s}
 #how .step:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:var(--shadow)}
 #how .step .n{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#A29BFE);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#fff}
 #how .step h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
 #how .step p{font-size:.88rem;color:var(--muted);line-height:1.65}
+
 
 /* ===== CORE CARDS ===== */
 #core{text-align:center;background:linear-gradient(180deg,var(--bg) 0%,rgba(108,92,231,.03) 50%,var(--bg) 100%)}
@@ -231,12 +258,17 @@ section[id]{scroll-margin-top:80px}
 <section class="hero" id="hero">
 <div class="hero-inner">
   <div class="badge">Extensión VS Code 1.99+ — MCP local para Copilot Chat, Claude Code y Codex</div>
-  <h1>Dale a tu IA<br><span class="grad">acceso a tus sistemas</span><br>desde el chat, sin código</h1>
-  <p class="sub">Actions as Context es una extensión para VS Code que inicia un servidor MCP local compartiendo tus requests HTTP y MCP 
-    con Copilot Chat, Claude Code y Codex. Estos clientes las descubren automáticamente, 
-    permitiéndoles realizar acciones en sistemas externos e incrementar su contexto con información de esos sistemas
-    enriqueciendo además tus respuestas, permitiéndo generar reportes y análisis de los datos en ellos 
-    — en tiempo real, sin código intermedio.</p>
+  <h1>
+  Actions as Context
+  <span class="grad">conecta tus agentes de coding con tus sistemas reales.</span>
+  <br>
+  <span class="soft">Desde el chat, sin código.</span>
+</h1>
+  <p class="sub">Desde VS Code, la extensión expone tus requests HTTP y MCP mediante un servidor MCP local, 
+    para que Copilot Chat, Claude Code y Codex puedan descubrirlos, ejecutarlos y adaptar sus parámetros en 
+    tiempo de ejecución. Esto les permite consultar APIs, servicios internos o herramientas externas, 
+    usar esos resultados como contexto y generar respuestas más útiles, reportes y análisis con datos en tiempo real, 
+    sin código intermedio.</p>
   <div class="actions">
     <a href="https://marketplace.visualstudio.com/items?itemName=tigudev/actions-as-context" class="btn btn-p" target="_blank">&#8607; Instalar desde Marketplace</a>
     <a href="#how" class="btn btn-s">Cómo funciona</a>
@@ -257,6 +289,18 @@ section[id]{scroll-margin-top:80px}
 <span class="section-label">Cómo funciona</span>
 <h2>De tus requests guardadas a acciones IA ejecutables</h2>
 <p class="sub-section">Tus requests pregrabadas se convierten en herramientas que Copilot Chat, Claude Code y Codex pueden invocar, adaptar y ejecutar contra cualquier sistema externo.</p>
+
+<div class="how-detail">
+  <p>
+    <strong>Actions as Context</strong> es una extensión para VS Code que levanta un servidor MCP local y pone tus requests HTTP y MCP al alcance de herramientas como Copilot Chat, Claude Code y Codex.
+  </p>
+  <p>
+    En la práctica, permite que esos agentes descubran automáticamente acciones disponibles, consulten sistemas externos y usen sus respuestas como contexto adicional. Además, pueden ajustar en tiempo de ejecución valores configurables de los requests, como parámetros, filtros, identificadores o payloads, para adaptarlos a cada necesidad sin que tengas que escribir código intermedio.
+  </p>
+  <p>
+    Con esto, los agentes no solo responden usando el código del proyecto o el historial del chat, sino también información viva de APIs, servicios internos, sistemas de negocio o herramientas externas. Eso les permite ejecutar acciones, obtener datos actualizados, generar análisis, preparar reportes y enriquecer sus respuestas en tiempo real.
+  </p>
+</div>
 <div class="steps">
 <div class="step">
   <div class="n">1</div>
