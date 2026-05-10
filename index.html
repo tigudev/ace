@@ -258,6 +258,7 @@ section[id]{scroll-margin-top:80px}
 }
 @media(max-width:640px){
   .main-nav .nav-tigu{display:none}
+  .main-nav{grid-template-columns:1fr 1fr}
   .main-nav ul{gap:1rem}
   .main-nav ul li:nth-child(2){display:none}
 }
@@ -285,6 +286,7 @@ section[id]{scroll-margin-top:80px}
 @media(max-width:420px){
   .main-nav{padding:.65rem 1rem}
   .main-nav .nav-right ul{display:none}
+  .main-nav .nav-right{justify-self:end}
   .main-nav .btn-p{padding:.5rem .85rem;font-size:.78rem}
   .main-nav .brand{font-size:.82rem;gap:.4rem}
   .hero h1{font-size:clamp(1.7rem,8.5vw,2.5rem)}
@@ -298,6 +300,7 @@ section[id]{scroll-margin-top:80px}
 @media(max-width:360px){
   .main-nav .brand{font-size:.7rem;gap:.35rem}
   .main-nav .brand svg{display:block;flex-shrink:0;width:26px;height:26px}
+  .main-nav .nav-right{justify-self:end}
   .hero h1{font-size:1.65rem}
   section h2{font-size:1.2rem}
 }
