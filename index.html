@@ -269,6 +269,38 @@ section[id]{scroll-margin-top:80px}
   .fixed-bar{font-size:.65rem;padding:.5rem 1rem}
   .fixed-bar-inner{gap:.6rem;flex-wrap:wrap}
 }
+
+/* ===== MOBILE 520px ===== */
+@media(max-width:520px){
+  .code-pill{flex-wrap:wrap;justify-content:center;gap:.4rem .6rem;padding:.6rem 1rem}
+  .hero .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;justify-items:center}
+  .hero .stats .num{font-size:1.4rem}
+  .hero .actions{flex-direction:column;align-items:center}
+  .hero .actions .btn{max-width:280px;width:100%;justify-content:center}
+  .priv-grid{max-width:100%}
+  .arch-box{min-width:0}
+}
+
+/* ===== MOBILE 420px ===== */
+@media(max-width:420px){
+  .main-nav{padding:.65rem 1rem}
+  .main-nav .nav-right ul{display:none}
+  .main-nav .btn-p{padding:.5rem .85rem;font-size:.78rem}
+  .main-nav .brand{font-size:.82rem;gap:.4rem}
+  .hero h1{font-size:clamp(1.7rem,8.5vw,2.5rem)}
+  .hero p.sub,.hero .eyebrow{font-size:.9rem}
+  section h2{font-size:clamp(1.2rem,6.5vw,1.8rem)}
+  section p.sub-section,.section-sub{font-size:.9rem;margin-bottom:2.5rem}
+  #how .how-detail p{font-size:.9rem}
+}
+
+/* ===== MOBILE 360px ===== */
+@media(max-width:360px){
+  .main-nav .brand{font-size:0;gap:0}
+  .main-nav .brand svg{display:block;flex-shrink:0;width:28px;height:28px}
+  .hero h1{font-size:1.65rem}
+  section h2{font-size:1.2rem}
+}
 </style>
 </head>
 <body>
