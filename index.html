@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actions as Context: Tools ejecutables con contexto para Copilot Chat</title>
+  <title>Actions as Context: MCP local para Copilot Chat, Claude Code y Codex</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -230,19 +230,19 @@ section[id]{scroll-margin-top:80px}
 
 <section class="hero" id="hero">
 <div class="hero-inner">
-  <div class="badge">Extensión VS Code 1.74+ — Integración nativa con Copilot Chat</div>
+  <div class="badge">Extensión VS Code 1.99+ — MCP local para Copilot Chat, Claude Code y Codex</div>
   <h1>Dale a tu IA<br><span class="grad">acceso a tus sistemas</span><br>desde el chat, sin código</h1>
-  <p class="sub">Actions as Context registra tus requests HTTP y MCP como herramientas que Copilot Chat puede descubrir y ejecutar. El agente adapta los parámetros al contexto de la conversación — en tiempo real, sin código intermedio.</p>
+  <p class="sub">Actions as Context levanta un servidor MCP local que expone tus requests HTTP y MCP como herramientas. Copilot Chat, Claude Code y Codex las descubren automáticamente y adaptan los parámetros al contexto de la conversación — en tiempo real, sin código intermedio.</p>
   <div class="actions">
     <a href="https://marketplace.visualstudio.com/items?itemName=tigudev/actions-as-context" class="btn btn-p" target="_blank">&#8607; Instalar desde Marketplace</a>
     <a href="#how" class="btn btn-s">Cómo funciona</a>
   </div>
   <div class="code-pill">
-    <code>Copilot Chat</code><span class="arr">→</span><code style="color:#00D2D3">list_collections</code><span class="arr">→</span><code style="color:#F0F0F5">execute_request</code><span class="arr">→</span><code style="color:#55EFC4">override params</code>
+    <code>Copilot / Claude / Codex</code><span class="arr">→</span><code style="color:#00D2D3">list_collections</code><span class="arr">→</span><code style="color:#F0F0F5">execute_request</code><span class="arr">→</span><code style="color:#55EFC4">override params</code>
   </div>
   <div class="stats">
     <div class="stat-item"><div class="num">HTTP + MCP</div><div class="lbl">Requests</div></div>
-    <div class="stat-item"><div class="num">Tools</div><div class="lbl">Nativas</div></div>
+    <div class="stat-item"><div class="num">MCP</div><div class="lbl">Local</div></div>
     <div class="stat-item"><div class="num">Override</div><div class="lbl">Dinámico</div></div>
     <div class="stat-item"><div class="num">Sin intermediarios</div><div class="lbl">Local o vía GitHub</div></div>
   </div>
@@ -252,7 +252,7 @@ section[id]{scroll-margin-top:80px}
 <section id="how">
 <span class="section-label">Cómo funciona</span>
 <h2>De tus requests guardadas a acciones IA ejecutables</h2>
-<p class="sub-section">Tus requests pregrabadas se convierten en herramientas que Copilot Chat puede invocar, adaptar y ejecutar contra cualquier sistema externo.</p>
+<p class="sub-section">Tus requests pregrabadas se convierten en herramientas que Copilot Chat, Claude Code y Codex pueden invocar, adaptar y ejecutar contra cualquier sistema externo.</p>
 <div class="steps">
 <div class="step">
   <div class="n">1</div>
@@ -265,7 +265,7 @@ section[id]{scroll-margin-top:80px}
   <div class="n">2</div>
   <div>
     <h3>Se expone automáticamente</h3>
-    <p>ACE registra herramientas nativas que Copilot Chat descubre automáticamente: listar colecciones, ejecutar requests, cambiar entornos. El agente las incluye en su reasoning.</p>
+    <p>ACE levanta un servidor MCP local que Copilot Chat, Claude Code y Codex descubren automáticamente, permitiéndoles: listar colecciones, ejecutar requests, cambiar entornos. El agente las incluye en su reasoning.</p>
   </div>
 </div>
 <div class="step">
@@ -285,8 +285,8 @@ section[id]{scroll-margin-top:80px}
 <div class="grid3">
 <div class="card">
   <div class="ico purple">&#9881;</div>
-  <h3>Tools nativas descubribles</h3>
-  <p>ACE registra un conjunto de tools que Copilot Chat descubre automáticamente. El agente lista tus colecciones, inspecciona la estructura de cada request y los ejecuta — todo desde el chat.</p>
+  <h3>MCP local descubrible</h3>
+  <p>ACE levanta un servidor MCP local que Copilot Chat, Claude Code y Codex descubren automáticamente. El agente lista tus colecciones, inspecciona la estructura de cada request y las ejecuta — todo desde el chat.</p>
 </div>
 <div class="card">
   <div class="ico cyan">&#x1F501;</div>
@@ -296,7 +296,7 @@ section[id]{scroll-margin-top:80px}
 <div class="card">
   <div class="ico green">&#9889;</div>
   <h3>HTTP y MCP</h3>
-  <p>Ejecuta requests contra APIs REST, GraphQL y servidores MCP — stdio, SSE o HTTP streaming — directamente desde Copilot Chat, sin salir del editor.</p>
+  <p>Ejecuta requests contra APIs REST, GraphQL y servidores MCP — stdio, SSE o HTTP streaming — directamente desde Copilot Chat, Claude Code o Codex, sin salir del editor.</p>
 </div>
 <div class="card">
   <div class="ico orange">&#129309;</div>
@@ -319,7 +319,7 @@ section[id]{scroll-margin-top:80px}
 <section id="caps">
 <span class="section-label">Tools disponibles</span>
 <h2>Todo lo que tu agente IA puede hacer</h2>
-<p class="sub-section">ACE expone herramientas concretas que Copilot Chat puede invocar. Cada una tiene parámetros tipados — el agente los adapta al contexto sin intervención manual.</p>
+<p class="sub-section">ACE expone herramientas concretas vía MCP local que Copilot Chat, Claude Code y Codex pueden invocar. Cada una tiene parámetros tipados — el agente los adapta al contexto sin intervención manual.</p>
 <div class="cap-grid">
 <div class="cap-item">
   <div class="check">&#10004;</div>
@@ -359,7 +359,7 @@ section[id]{scroll-margin-top:80px}
 <section id="architecture">
 <span class="section-label">Arquitectura del tool flow</span>
 <h2>Cómo tus requests llegan al agente IA</h2>
-<p>ACE actúa como puente entre tus requests guardadas y el runtime de Copilot Chat. Registra tools nativas que el agente descubre, invoca y usa para ejecutar contra sistemas externos.</p>
+<p>ACE actúa como puente entre tus requests guardadas y los agentes IA. Levanta un servidor MCP local que Copilot Chat, Claude Code y Codex descubren, invocan y usan para ejecutar contra sistemas externos.</p>
 <div class="arch-wrapper">
 <div class="arch-box">
   <div class="t">ACE — tus requests</div>
@@ -370,7 +370,7 @@ section[id]{scroll-margin-top:80px}
 </div>
 <div class="arch-arrow">&#8594;</div>
 <div class="arch-box highlight">
-  <div class="t">Tools nativas (vscode.lm)</div>
+  <div class="t">Servidor MCP local</div>
   <div class="arch-item">list_collections</div>
   <div class="arch-item">execute_request + override</div>
   <div class="arch-item">request_structure</div>
@@ -378,7 +378,7 @@ section[id]{scroll-margin-top:80px}
 </div>
 <div class="arch-arrow">&#8594;</div>
 <div class="arch-box">
-  <div class="t">Copilot Chat — agente IA</div>
+  <div class="t">Copilot Chat / Claude Code / Codex</div>
   <div class="arch-item">Descubre tools</div>
   <div class="arch-item">Adapta parámetros</div>
   <div class="arch-item">Ejecuta requests</div>
@@ -395,7 +395,7 @@ section[id]{scroll-margin-top:80px}
 <div class="priv-card">
   <div class="ico">&#127968;</div>
   <h3>100% Local</h3>
-  <p>Toda la información se guarda localmente en VS Code. Las tools se registran en memoria — ningún dato tuyo se envía a servidores de ACE.</p>
+  <p>Toda la información se guarda localmente en VS Code. El servidor MCP se levanta en tu máquina — ningún dato tuyo se envía a servidores de ACE.</p>
 </div>
 <div class="priv-card">
   <div class="ico">&#128274;</div>
@@ -413,7 +413,7 @@ section[id]{scroll-margin-top:80px}
 <section id="cta">
 <div class="cta">
   <h2>Dale a tu agente IA la capacidad de actuar</h2>
-  <p>Instalá Actions as Context en VS Code, definí tus requests HTTP y MCP, y dejá que Copilot Chat las descubra, adapte y ejecute — directamente desde el chat, sin código intermedio.</p>
+  <p>Instalá Actions as Context en VS Code, definí tus requests HTTP y MCP, y dejá que Copilot Chat, Claude Code o Codex las descubran, adapten y ejecuten — directamente desde el chat, sin código intermedio.</p>
   <div class="actions">
     <a href="https://marketplace.visualstudio.com/items?itemName=tigudev/actions-as-context" class="btn btn-p" target="_blank">&#8607; Instalar ahora</a>
   </div>
